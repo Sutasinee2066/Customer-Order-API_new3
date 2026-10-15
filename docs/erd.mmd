@@ -1,0 +1,19 @@
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    CUSTOMER {
+        int customer_id PK
+        string first_name
+        string last_name
+        string phone
+        string email
+        decimal latitude
+        decimal longitude
+        datetime created_at
+    }
+    ORDER {
+        int order_id PK
+        int customer_id FK
+        int boxes
+        datetime created_at
+        boolean simulated
+    }
